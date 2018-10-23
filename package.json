@@ -9,7 +9,8 @@
     "README.md"
   ],
   "scripts": {
-    "test": "eslint . -f tap && nyc --reporter=lcov --reporter=text mocha"
+    "test": "eslint . -f tap && nyc --reporter=lcov --reporter=text mocha",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "author": "Milos Djermanovic <milos.djermanovic@gmail.com>",
   "license": "MIT",
@@ -18,6 +19,7 @@
   "bugs": "https://github.com/mdjermanovic/cross-path-sort/issues",
   "devDependencies": {
     "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.7.0",
     "eslint-plugin-prettier": "^3.0.0",
     "js-combinatorics": "^0.5.3",
