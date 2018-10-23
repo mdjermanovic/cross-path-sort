@@ -1,0 +1,4 @@
+!.eslintrc.js
+!.prettierrc.js
+.nyc_output/
+coverage/

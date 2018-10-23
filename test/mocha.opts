@@ -1,0 +1,3 @@
+# Most of the tests are working with all permutations of the input array and all path prefixes
+--no-timeouts
+-s 1000000

@@ -1,0 +1,57 @@
+{
+  "name": "cross-path-sort",
+  "version": "1.0.0",
+  "description": "Cross-platform file path sorting. Sort an array of path strings or objects containing path strings.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "eslint . -f tap && nyc --reporter=lcov --reporter=text mocha"
+  },
+  "author": "Milos Djermanovic <milos.djermanovic@gmail.com>",
+  "license": "MIT",
+  "repository": "mdjermanovic/cross-path-sort",
+  "homepage": "https://github.com/mdjermanovic/cross-path-sort",
+  "bugs": "https://github.com/mdjermanovic/cross-path-sort/issues",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "js-combinatorics": "^0.5.3",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "prettier": "^1.14.3",
+    "sinon": "^7.0.0",
+    "sinon-test": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "sort",
+    "sorting",
+    "path",
+    "paths",
+    "file",
+    "files",
+    "filepath",
+    "dir",
+    "directory",
+    "directories",
+    "folder",
+    "subdirectory",
+    "relative",
+    "absolute",
+    "array",
+    "cross-platform",
+    "posix",
+    "linux",
+    "unix",
+    "macos",
+    "windows",
+    "node"
+  ]
+}
