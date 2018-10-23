@@ -1,6 +1,6 @@
 # cross-path-sort
 
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mdjermanovic/cross-path-sort/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/cross-path-sort.svg?style=flat)](https://www.npmjs.com/package/cross-path-sort) [![Coverage Status](https://img.shields.io/coveralls/mdjermanovic/cross-path-sort/master.svg?style=flat)](https://coveralls.io/github/mdjermanovic/cross-path-sort?branch=master) [![Build Status](https://img.shields.io/travis/mdjermanovic/cross-path-sort/master.svg?style=flat)](https://travis-ci.org/mdjermanovic/cross-path-sort) 
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mdjermanovic/cross-path-sort/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/cross-path-sort.svg?style=flat)](https://www.npmjs.com/package/cross-path-sort) [![Build Status](https://travis-ci.org/mdjermanovic/cross-path-sort.svg?branch=master)](https://travis-ci.org/mdjermanovic/cross-path-sort) [![Coverage Status](https://img.shields.io/coveralls/mdjermanovic/cross-path-sort/master.svg?style=flat)](https://coveralls.io/github/mdjermanovic/cross-path-sort?branch=master)
 
 Cross-platform non-destructive file path sorting function.
 
