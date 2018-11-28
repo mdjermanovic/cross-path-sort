@@ -5,7 +5,7 @@
 
 'use strict';
 
-const nodePathAPI = require('path');
+const NodePath = require('path');
 
 // Path types. Order of keys defines default order of path types in the sorted array.
 const posixPathType = {
@@ -43,13 +43,13 @@ const otherRoot = 0;
 /**
  * Internal cross-platform file path sorting function.
  *
- * @param {Object} pathAPI Provides platform-specific normalize(), parse() and sep.
+ * @param {Object} Path Provides platform-specific normalize(), parse() and sep.
  * @param {(string[]|any[])} paths Array of path strings or objects containing path strings.
  * @param {SortOptions} [options] Sort options.
  * @returns {(string[]|any[])} Sorted array.
  */
 function _sort(
-  pathAPI,
+  Path,
   paths,
   {
     pathKey,
@@ -115,7 +115,7 @@ function _sort(
   function preparePathOrder() {
     let order;
     // Prepare sort order by path type. Map over keys can be replaced with Object.values from ES2017
-    if (pathAPI.sep === '/') {
+    if (Path.sep === '/') {
       // Posix
       if (posixOrder) {
         // Custom
@@ -124,7 +124,7 @@ function _sort(
         // Predefined
         order = Object.keys(posixPathType).map(key => posixPathType[key]);
       }
-    } else if (pathAPI.sep === '\\') {
+    } else if (Path.sep === '\\') {
       // Windows
       if (windowsOrder) {
         // Custom
@@ -166,11 +166,11 @@ function _sort(
     }
 
     // Parse and normalize never throw if you send a string, and always return strings
-    const normalizedPathString = pathAPI.normalize(pathString);
-    let { root, dir, base } = pathAPI.parse(normalizedPathString);
+    const normalizedPathString = Path.normalize(pathString);
+    let { root, dir, base } = Path.parse(normalizedPathString);
 
     let pathType = undefined;
-    if (pathAPI.sep === '/') {
+    if (Path.sep === '/') {
       // Posix
       if (root) {
         if (root === '/') {
@@ -188,7 +188,7 @@ function _sort(
           pathType = posixPathType.rel;
         }
       }
-    } else if (pathAPI.sep === '\\') {
+    } else if (Path.sep === '\\') {
       // Windows
       if (root) {
         if (root.startsWith('\\\\')) {
@@ -255,7 +255,7 @@ function _sort(
     }
 
     // Root is always included in dir
-    const dirs = dir ? dir.split(pathAPI.sep) : [];
+    const dirs = dir ? dir.split(Path.sep) : [];
 
     return { original, pathString, normalizedPathString, pathType, dirs, base };
   }
@@ -334,7 +334,7 @@ function _sort(
  * @returns {(string[]|any[])} Sorted array.
  */
 function sort(paths, options) {
-  return _sort(nodePathAPI, paths, options);
+  return _sort(NodePath, paths, options);
 }
 
 /**
@@ -345,7 +345,7 @@ function sort(paths, options) {
  * @returns {(string[]|any[])} Sorted array.
  */
 function posixSort(paths, options) {
-  return _sort(nodePathAPI.posix, paths, options);
+  return _sort(NodePath.posix, paths, options);
 }
 
 /**
@@ -356,7 +356,7 @@ function posixSort(paths, options) {
  * @returns {(string[]|any[])} Sorted array.
  */
 function windowsSort(paths, options) {
-  return _sort(nodePathAPI.win32, paths, options);
+  return _sort(NodePath.win32, paths, options);
 }
 
 module.exports = {
