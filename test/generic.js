@@ -5,7 +5,7 @@ const { sort } = require('../index');
  *  Detailed tests are in posix.js and windows.js suites
  *  sort() function on posix platforms works like posix.sort()
  *  sort() function on windows platforms works like windows.sort()
-*/
+ */
 
 describe('Generic sort function', () => {
   it('Should work with array of strings', () => {
